@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Entre em contato com o Black Hornet Coffee. Tire dúvidas ou dê sugestões.">
+        <title>Contato | Black Hornet Coffee</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="topo">
+            <div class="logo">
+                <img src="../img/logo.jpeg" alt="Logo Black Hornet Coffee" width="200" height="200">
+            </div>
+            <nav class="menu">
+                <a href="../index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="receitas.html">Receitas</a>
+                <a href="contato.html" class="ativo">Contato</a>
+            </nav>
+        </header>
+
+        <section class="contato">
+            <h2>Fale Conosco</h2>
+
+            <form id="formContato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <p id="msg-sucesso" style="display:none; color: green; margin-top: 16px;">
+                ✔ Mensagem enviada com sucesso!
+            </p>
+            <p id="msg-erro" style="display:none; color: red; margin-top: 16px;">
+                ✖ Erro ao enviar. Tente novamente.
+            </p>
+        </section>
+
+        <footer class="rodape">
+            <p>&copy; 2025 Black Hornet Coffee. Todos os direitos reservados.</p>
+            <p><a href="contato.html">Entre em contato</a></p>
+        </footer>
+
+        <script src="../js/contato.js"></script>
+    </body>
+</html>

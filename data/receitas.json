@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "titulo": "Café Gelado",
+        "img": "img/icedmoka.jpg",
+        "descricao": "O café gelado é uma bebida refrescante feita com café (expresso ou coado) resfriado e servido com gelo, ideal para dias quentes."
+    },
+    {
+        "id": 2,
+        "titulo": "Café Dalgona",
+        "img": "img/café dalgona.webp",
+        "descricao": "O café Dalgona é uma bebida cremosa e aerada, feita batendo partes iguais de café solúvel, açúcar e água quente até formar uma espuma densa, servida sobre leite frio ou quente."
+    },
+    {
+        "id": 3,
+        "titulo": "Latte de Coco",
+        "img": "img/Latte de coco gelado.webp",
+        "descricao": "O Latte de Coco é uma bebida cremosa e perfumada, composta por café expresso e leite de coco, oferecendo uma alternativa sem lactose e vegana ao latte tradicional."
+    },
+    {
+        "id": 4,
+        "titulo": "Cappuccino com Especiarias",
+        "img": "img/Cappuccino com especiarias.webp",
+        "descricao": "O cappuccino com especiarias é uma variação aromática e aconchegante da bebida clássica, combinando café expresso e leite cremoso com ingredientes como canela, noz-moscada, gengibre e cravo."
+    },
+    {
+        "id": 5,
+        "titulo": "Milkshake de Banana com Café",
+        "img": "img/Milkshake de Banana com Café.webp",
+        "descricao": "O milkshake de banana é uma bebida gelada, cremosa e doce, preparada batendo bananas maduras com leite e sorvete de baunilha."
+    }
+]

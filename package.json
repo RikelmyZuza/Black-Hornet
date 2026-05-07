@@ -1,0 +1,15 @@
+{
+  "name": "black-hornet",
+  "version": "1.0.0",
+  "description": "Black Hornet Coffee — site de receitas e contato",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.0.0",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  }
+}
