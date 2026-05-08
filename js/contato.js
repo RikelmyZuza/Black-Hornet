@@ -1,49 +1,51 @@
-// Detecta automaticamente a URL base:
-// - Em localhost usa http://localhost:3000
-// - Em produção (Render, etc.) usa a mesma origem da página
-const API_URL = "http://localhost:3000"
+// 1 - Pega a tag do formulário pelo ID no HTML
+const form = document.getElementById("formContato");
 
-const form  = document.getElementById("formContato");
-const botao = form.querySelector("button[type='submit']");
-
-form.addEventListener("submit", async function (event) {
+// 2 - Fica "ouvindo" o momento que o usuário clicar em Enviar
+form.addEventListener("submit", async function(event){
+    // CAPTURA OS DADOS E CRIA UM OBJETO COM ELES
+    // 3 - Impede que a página recarregue 
+    //  (comprotamento padrão do form)
     event.preventDefault();
 
-    const dados = {
-        nome:     document.getElementById("nome").value,
-        email:    document.getElementById("email").value,
-        mensagem: document.getElementById("mensagem").value
-    };
+    // 4 - Lê o que o usuário digitou em cada campo
+    const nome = document.getElementById("nome").value; //HTMLInputElement -> valor
+    const email = document.getElementById("email").value; //HTMLInputElement -> valor
+    const mensagem = document.getElementById("mensagem").value; //HTMLTextAreaElement ->valor
 
-    // Desabilita o botão e mostra "Enviando..." enquanto aguarda
-    botao.disabled    = true;
-    botao.textContent = "Enviando...";
+    // 5 - Agrupa os dados em um OBJETO 
+    // (como uma caixinha organizadora)
+    const novaMensagem = {nome,email,mensagem}
 
-    // Esconde mensagens anteriores
-    document.getElementById("msg-sucesso").style.display = "none";
-    document.getElementById("msg-erro").style.display    = "none";
+    // ENVIANDO OS DADOS PARA O SERVIDOR
+    // com tratamento de excessão
+    try{
+        // 6 - Envia os dados para ao servidor usando fetch
+        const resposta = await fetch("http://localhost:3000/contatos",
+            {
+            method:"POST", // POST = estamos enviando os dados
+            headers: {
+                "Content-Type": "application/json" 
+                    // Avisa que o formato é JSON
+            },
+            body: JSON.stringify(novaMensagem)
+                //converte o objeto para texto JSON
+            }
+        );
 
-    try {
-        const resposta = await fetch(`${API_URL}/contatos`, {
-            method:  "POST",
-            headers: { "Content-Type": "application/json" },
-            body:    JSON.stringify(dados)
-        });
+        // 7 - Lê a resposta que o servidor enviou de volta
+        const dados = await resposta.text();
 
-        if (resposta.ok) {
-            document.getElementById("msg-sucesso").style.display = "block";
-            form.reset();
-        } else {
-            throw new Error("Resposta não ok");
-        }
+        // 8 - Mostra os dados para o usuário
+        alert(dados);
 
-    } catch (erro) {
-        document.getElementById("msg-erro").style.display = "block";
-        console.error("Erro ao conectar com o servidor:", erro);
+        // 9 - Limpa a resposta para o usuário
+        form.reset();
 
-    } finally {
-        // Sempre restaura o botão, independente do resultado
-        botao.disabled    = false;
-        botao.textContent = "Enviar";
+    }catch(erro){
+        // 10 - Se algo deu errado, avisa o usuário
+        //alert(`Erro: ${erro}`);
+        console.error(erro);
     }
-});
+
+})
