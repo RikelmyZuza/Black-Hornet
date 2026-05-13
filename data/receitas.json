@@ -3,30 +3,314 @@
         "id": 1,
         "titulo": "Café Gelado",
         "img": "img/icedmoka.jpg",
-        "descricao": "O café gelado é uma bebida refrescante feita com café (expresso ou coado) resfriado e servido com gelo, ideal para dias quentes."
+        "categoria": "Clássico",
+        "descricao": "O café gelado é uma bebida refrescante feita com café (expresso ou coado) resfriado e servido com gelo, ideal para dias quentes.",
+        "ingredientes": [
+            "1 dose de café expresso (ou 150ml de café coado forte)",
+            "1 xícara de gelo",
+            "100ml de leite gelado (opcional)",
+            "Açúcar ou adoçante a gosto"
+        ],
+        "preparo": [
+            "Prepare o café expresso ou coado bem forte e deixe esfriar um pouco.",
+            "Encha um copo alto com gelo.",
+            "Despeje o café sobre o gelo lentamente.",
+            "Adicione o leite gelado se desejar, e adoce a gosto.",
+            "Mexa suavemente e sirva imediatamente."
+        ]
     },
     {
         "id": 2,
         "titulo": "Café Dalgona",
         "img": "img/café dalgona.webp",
-        "descricao": "O café Dalgona é uma bebida cremosa e aerada, feita batendo partes iguais de café solúvel, açúcar e água quente até formar uma espuma densa, servida sobre leite frio ou quente."
+        "categoria": "Tendência",
+        "descricao": "O café Dalgona é uma bebida cremosa e aerada, feita batendo partes iguais de café solúvel, açúcar e água quente até formar uma espuma densa, servida sobre leite frio ou quente.",
+        "ingredientes": [
+            "2 colheres de sopa de café solúvel",
+            "2 colheres de sopa de açúcar",
+            "2 colheres de sopa de água quente",
+            "200ml de leite gelado ou quente",
+            "Gelo a gosto (para versão gelada)"
+        ],
+        "preparo": [
+            "Coloque o café solúvel, o açúcar e a água quente em uma tigela.",
+            "Bata com batedeira ou fouet por 3–5 minutos até formar uma espuma firme e cor de caramelo.",
+            "Encha um copo com gelo e despeje o leite.",
+            "Coloque a espuma por cima delicadamente.",
+            "Mexa na hora de tomar para misturar os sabores."
+        ]
     },
     {
         "id": 3,
         "titulo": "Latte de Coco",
         "img": "img/Latte de coco gelado.webp",
-        "descricao": "O Latte de Coco é uma bebida cremosa e perfumada, composta por café expresso e leite de coco, oferecendo uma alternativa sem lactose e vegana ao latte tradicional."
+        "categoria": "Vegano",
+        "descricao": "O Latte de Coco é uma bebida cremosa e perfumada, composta por café expresso e leite de coco, oferecendo uma alternativa sem lactose e vegana ao latte tradicional.",
+        "ingredientes": [
+            "1 dose de café expresso (30ml)",
+            "150ml de leite de coco",
+            "1 colher de chá de xarope de baunilha ou mel (opcional)",
+            "Gelo (para versão gelada)",
+            "Coco ralado para decorar"
+        ],
+        "preparo": [
+            "Prepare o expresso e reserve.",
+            "Aqueça o leite de coco em fogo baixo (ou deixe gelado para versão fria).",
+            "Despeje o leite de coco no copo sobre o gelo.",
+            "Adicione o expresso por cima devagar para criar camadas.",
+            "Adoce se preferir e decore com coco ralado."
+        ]
     },
     {
         "id": 4,
         "titulo": "Cappuccino com Especiarias",
         "img": "img/Cappuccino com especiarias.webp",
-        "descricao": "O cappuccino com especiarias é uma variação aromática e aconchegante da bebida clássica, combinando café expresso e leite cremoso com ingredientes como canela, noz-moscada, gengibre e cravo."
+        "categoria": "Aromático",
+        "descricao": "O cappuccino com especiarias é uma variação aromática e aconchegante da bebida clássica, combinando café expresso e leite cremoso com ingredientes como canela, noz-moscada, gengibre e cravo.",
+        "ingredientes": [
+            "1 dose de café expresso",
+            "150ml de leite integral",
+            "1/4 colher de chá de canela em pó",
+            "Pitada de noz-moscada",
+            "Pitada de gengibre em pó",
+            "1 cravo-da-índia (opcional)",
+            "Açúcar a gosto"
+        ],
+        "preparo": [
+            "Misture as especiarias ao leite frio antes de vaporizá-lo.",
+            "Vaporize o leite com especiarias até formar espuma cremosa.",
+            "Prepare o expresso em uma xícara.",
+            "Despeje o leite vaporizado sobre o expresso.",
+            "Finalize polvilhando canela e noz-moscada por cima."
+        ]
     },
     {
         "id": 5,
         "titulo": "Milkshake de Banana com Café",
         "img": "img/Milkshake de Banana com Café.webp",
-        "descricao": "O milkshake de banana é uma bebida gelada, cremosa e doce, preparada batendo bananas maduras com leite e sorvete de baunilha."
+        "categoria": "Gelado",
+        "descricao": "O milkshake de banana é uma bebida gelada, cremosa e doce, preparada batendo bananas maduras com leite e sorvete de baunilha.",
+        "ingredientes": [
+            "1 banana madura congelada",
+            "1 dose de café expresso gelado",
+            "2 bolas de sorvete de baunilha",
+            "100ml de leite gelado",
+            "1 colher de chá de mel",
+            "Canela a gosto"
+        ],
+        "preparo": [
+            "Prepare o expresso e deixe esfriar na geladeira.",
+            "Coloque no liquidificador a banana congelada, o sorvete e o leite.",
+            "Adicione o café gelado e o mel.",
+            "Bata por 1–2 minutos até ficar homogêneo e cremoso.",
+            "Sirva em copo alto, polvilhe canela e sirva imediatamente."
+        ]
+    },
+    {
+        "id": 6,
+        "titulo": "Expresso Batido Gelado",
+        "img": "img/Expresso Batido Gelado.webp",
+        "categoria": "Clássico",
+        "descricao": "O expresso batido gelado é uma releitura intensa e refrescante do clássico espresso, agitado vigorosamente com gelo até obter uma camada espumosa e aerada por cima.",
+        "ingredientes": [
+            "2 doses de café expresso (60ml)",
+            "1 xícara de gelo picado",
+            "1 colher de chá de açúcar (opcional)",
+            "Leite gelado a gosto (opcional)"
+        ],
+        "preparo": [
+            "Prepare o expresso duplo e adoce se desejar enquanto ainda quente.",
+            "Coloque o gelo em uma coqueteleira ou pote com tampa.",
+            "Despeje o expresso sobre o gelo.",
+            "Agite vigorosamente por 15–20 segundos até formar espuma.",
+            "Coe sobre um copo e sirva puro ou com um toque de leite gelado."
+        ]
+    },
+    {
+        "id": 7,
+        "titulo": "Smoothie de Café",
+        "img": "img/Smoothie de café.webp",
+        "categoria": "Saudável",
+        "descricao": "O smoothie de café é uma bebida nutritiva e energizante, feita batendo café gelado com banana, leite e mel, resultando em uma mistura cremosa e cheia de sabor.",
+        "ingredientes": [
+            "1 dose de café expresso gelado",
+            "1 banana madura",
+            "200ml de leite (ou leite vegetal)",
+            "1 colher de sopa de mel",
+            "2 colheres de sopa de aveia",
+            "Gelo a gosto"
+        ],
+        "preparo": [
+            "Prepare o café e leve à geladeira por 10 minutos.",
+            "Coloque todos os ingredientes no liquidificador.",
+            "Bata até obter uma textura lisa e cremosa.",
+            "Prove e ajuste o mel se necessário.",
+            "Sirva gelado em copo alto com canudo."
+        ]
+    },
+    {
+        "id": 8,
+        "titulo": "Latte de Avelã",
+        "img": "img/Latte de Avelã.webp",
+        "categoria": "Sofisticado",
+        "descricao": "O latte de avelã é uma bebida sofisticada e perfumada, que combina espresso encorpado com leite vaporizado e um toque de xarope de avelã, criando uma harmonia irresistível de sabores.",
+        "ingredientes": [
+            "1 dose de café expresso",
+            "200ml de leite integral",
+            "2 colheres de sopa de xarope de avelã",
+            "Chantilly para decorar (opcional)",
+            "Avelãs trituradas para finalizar"
+        ],
+        "preparo": [
+            "Prepare o expresso e coloque em um copo grande.",
+            "Adicione o xarope de avelã ao expresso e misture.",
+            "Vaporize ou aqueça o leite até criar espuma.",
+            "Despeje o leite vaporizado sobre o expresso com avelã.",
+            "Decore com chantilly e avelãs trituradas."
+        ]
+    },
+    {
+        "id": 9,
+        "titulo": "Frappé de Caramelo",
+        "img": "img/Frappe de Caramelo.webp",
+        "categoria": "Indulgente",
+        "descricao": "O frappé de caramelo é uma bebida gelada e indulgente, preparada com café, leite, gelo e calda de caramelo batidos até atingir uma textura aveludada e espumante.",
+        "ingredientes": [
+            "1 dose de café expresso gelado",
+            "150ml de leite gelado",
+            "1 xícara de gelo",
+            "2 colheres de sopa de calda de caramelo",
+            "Chantilly e calda extra para decorar"
+        ],
+        "preparo": [
+            "Prepare o expresso e leve ao freezer por 10 minutos.",
+            "No liquidificador, coloque gelo, leite, café e a calda de caramelo.",
+            "Bata por 1 minuto até ficar cremoso e gelado.",
+            "Despeje em copo alto, cubra com chantilly.",
+            "Finalize com fio de caramelo por cima e sirva."
+        ]
+    },
+    {
+        "id": 10,
+        "titulo": "Café Latte com Matcha",
+        "img": "img/Café Latte com Matcha.webp",
+        "categoria": "Fusion",
+        "descricao": "O café latte com matcha une o amargor suave do chá verde japonês com a intensidade do espresso e a suavidade do leite vaporizado, formando uma bebida única com camadas de sabor e cor.",
+        "ingredientes": [
+            "1 dose de café expresso",
+            "1 colher de chá de matcha em pó",
+            "200ml de leite (de preferência de aveia ou integral)",
+            "1 colher de chá de água quente",
+            "Mel ou xarope a gosto"
+        ],
+        "preparo": [
+            "Dissolva o matcha em pó na água quente, mexendo bem até não restar grumos.",
+            "Prepare o expresso.",
+            "Aqueça e vaporize o leite até criar espuma.",
+            "Em um copo, coloque o matcha dissolvido, depois o expresso.",
+            "Despeje o leite vaporizado por cima e adoce se preferir."
+        ]
+    },
+    {
+        "id": 11,
+        "titulo": "Café Vietnamita",
+        "img": "img/Café vietnamita.webp",
+        "categoria": "Internacional",
+        "descricao": "O café vietnamita é uma bebida encorpada e doce, preparada com café coado lentamente em coador phin e servido com leite condensado, criando um contraste marcante entre amargo e adocicado.",
+        "ingredientes": [
+            "15g de café moído grosso",
+            "100ml de água quente (90–95°C)",
+            "2–3 colheres de sopa de leite condensado",
+            "Gelo (para versão iced)"
+        ],
+        "preparo": [
+            "Coloque o leite condensado no fundo do copo.",
+            "Posicione o coador phin sobre o copo.",
+            "Adicione o café moído e aperte levemente o filtro.",
+            "Despeje a água quente e deixe coar por 4–5 minutos.",
+            "Mexa bem para incorporar o leite condensado. Para versão gelada, sirva sobre gelo."
+        ]
+    },
+    {
+        "id": 12,
+        "titulo": "Espresso Martini",
+        "img": "img/Espresso Martini.webp",
+        "categoria": "Drinque",
+        "descricao": "O espresso martini é um drinque sofisticado que combina espresso gelado, vodka e licor de café batidos na coqueteleira, resultando em um coquetel elegante com espuma cremosa na superfície.",
+        "ingredientes": [
+            "1 dose de café expresso gelado",
+            "50ml de vodka",
+            "25ml de licor de café (Kahlúa ou similar)",
+            "1 colher de chá de açúcar simples (opcional)",
+            "3 grãos de café para decorar"
+        ],
+        "preparo": [
+            "Prepare o expresso e deixe esfriar completamente.",
+            "Na coqueteleira com gelo, adicione o expresso, a vodka e o licor de café.",
+            "Agite vigorosamente por 20–25 segundos para criar espuma.",
+            "Coe em uma taça de martini gelada.",
+            "Decore com 3 grãos de café sobre a espuma e sirva."
+        ]
+    },
+    {
+        "id": 13,
+        "titulo": "Café Gelado Gaseificado",
+        "img": "img/Café Gelado Gaseificado.webp",
+        "categoria": "Inovador",
+        "descricao": "O café gelado gaseificado é uma bebida refrescante e surpreendente, que combina espresso concentrado com água com gás e gelo, entregando um frescor efervescente com toda a intensidade do café.",
+        "ingredientes": [
+            "1 dose de café expresso duplo (60ml)",
+            "150ml de água com gás bem gelada",
+            "Gelo",
+            "Fatia de laranja ou limão (opcional)"
+        ],
+        "preparo": [
+            "Prepare o expresso duplo e deixe esfriar.",
+            "Encha um copo com bastante gelo.",
+            "Despeje a água com gás gelada sobre o gelo.",
+            "Adicione o café gelado por cima sem misturar para criar camadas.",
+            "Decore com fatia de laranja ou limão e sirva sem mexer muito."
+        ]
+    },
+    {
+        "id": 14,
+        "titulo": "Mocha Gelado",
+        "img": "img/Café Latte Mocha Gelado.webp",
+        "categoria": "Clássico",
+        "descricao": "O mocha gelado é uma bebida irresistível que une espresso, calda de chocolate e leite gelado em uma composição cremosa e perfeitamente equilibrada entre o café e o cacau.",
+        "ingredientes": [
+            "1 dose de café expresso",
+            "150ml de leite gelado",
+            "2 colheres de sopa de calda de chocolate",
+            "Gelo",
+            "Chantilly e cacau em pó para decorar"
+        ],
+        "preparo": [
+            "Prepare o expresso e deixe esfriar.",
+            "No copo, coloque a calda de chocolate e um pouco de leite, misture.",
+            "Adicione o gelo.",
+            "Despeje o leite restante e depois o expresso.",
+            "Finalize com chantilly e polvilhe cacau em pó por cima."
+        ]
+    },
+    {
+        "id": 15,
+        "titulo": "Raspadinha de Café",
+        "img": "img/Raspadinha de Café.webp",
+        "categoria": "Refrescante",
+        "descricao": "A raspadinha de café é uma sobremesa gelada e refrescante, feita com café forte congelado e raspado, servida com leite condensado — uma releitura brasileira dos granitás italianos.",
+        "ingredientes": [
+            "300ml de café coado forte",
+            "2 colheres de sopa de açúcar",
+            "4 colheres de sopa de leite condensado",
+            "Leite de coco ou chantilly para finalizar"
+        ],
+        "preparo": [
+            "Adoce o café ainda quente com o açúcar e misture bem.",
+            "Despeje em um recipiente raso e leve ao freezer por 2 horas.",
+            "A cada 30 minutos, raspe com um garfo para formar cristais de gelo.",
+            "Repita até obter uma textura granulada e solta.",
+            "Sirva em copinho com leite condensado por cima."
+        ]
     }
 ]

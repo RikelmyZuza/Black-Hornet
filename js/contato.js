@@ -1,51 +1,96 @@
-// 1 - Pega a tag do formulário pelo ID no HTML
-const form = document.getElementById("formContato");
+/* ═══════════════════════════════════════════════════════════
+   contato.js
+   Responsável por:
+     1. Capturar os dados do formulário de contato
+     2. Enviar os dados para o servidor via fetch (POST)
+     3. Exibir notificações visuais de sucesso ou erro
+        (sem usar alert() do navegador, que é feio)
+   ═══════════════════════════════════════════════════════════ */
 
-// 2 - Fica "ouvindo" o momento que o usuário clicar em Enviar
-form.addEventListener("submit", async function(event){
-    // CAPTURA OS DADOS E CRIA UM OBJETO COM ELES
-    // 3 - Impede que a página recarregue 
-    //  (comprotamento padrão do form)
-    event.preventDefault();
 
-    // 4 - Lê o que o usuário digitou em cada campo
-    const nome = document.getElementById("nome").value; //HTMLInputElement -> valor
-    const email = document.getElementById("email").value; //HTMLInputElement -> valor
-    const mensagem = document.getElementById("mensagem").value; //HTMLTextAreaElement ->valor
+/* ─── Referências aos elementos do HTML ─── */
 
-    // 5 - Agrupa os dados em um OBJETO 
-    // (como uma caixinha organizadora)
-    const novaMensagem = {nome,email,mensagem}
+// O formulário de contato
+const formularioContato = document.getElementById("formularioContato");
 
-    // ENVIANDO OS DADOS PARA O SERVIDOR
-    // com tratamento de excessão
-    try{
-        // 6 - Envia os dados para ao servidor usando fetch
-        const resposta = await fetch("http://localhost:3000/contatos",
-            {
-            method:"POST", // POST = estamos enviando os dados
-            headers: {
-                "Content-Type": "application/json" 
-                    // Avisa que o formato é JSON
-            },
-            body: JSON.stringify(novaMensagem)
-                //converte o objeto para texto JSON
-            }
-        );
+// Parágrafos de feedback que ficam escondidos até serem necessários
+const avisoSucesso = document.getElementById("aviso-sucesso");
+const avisoErro    = document.getElementById("aviso-erro");
 
-        // 7 - Lê a resposta que o servidor enviou de volta
-        const dados = await resposta.text();
 
-        // 8 - Mostra os dados para o usuário
-        alert(dados);
+/* ════════════════════════════════════════
+   FUNÇÃO: exibirNotificacao
+   Mostra uma mensagem de sucesso ou erro
+   abaixo do formulário por alguns segundos,
+   sem usar o alert() nativo do navegador.
 
-        // 9 - Limpa a resposta para o usuário
-        form.reset();
+   Parâmetros:
+     tipo     → "sucesso" ou "erro"
+     mensagem → texto a exibir (opcional, usa padrão se omitido)
+   ════════════════════════════════════════ */
+function exibirNotificacao(tipo, mensagem) {
 
-    }catch(erro){
-        // 10 - Se algo deu errado, avisa o usuário
-        //alert(`Erro: ${erro}`);
-        console.error(erro);
+    if (tipo === "sucesso") {
+        // Define o texto (usa padrão se não vier mensagem)
+        avisoSucesso.textContent = mensagem || "✓ Mensagem enviada! Retornaremos em breve.";
+
+        // Torna o parágrafo visível
+        avisoSucesso.style.display = "block";
+
+        // Esconde automaticamente após 5 segundos
+        setTimeout(() => { avisoSucesso.style.display = "none"; }, 5000);
+
+    } else {
+        avisoErro.textContent = mensagem || "✗ Não foi possível enviar. Tente novamente.";
+        avisoErro.style.display = "block";
+        setTimeout(() => { avisoErro.style.display = "none"; }, 5000);
     }
+}
 
-})
+
+/* ════════════════════════════════════════
+   EVENTO: submit do formulário
+   Dispara quando o usuário clica em "Enviar mensagem"
+   ════════════════════════════════════════ */
+formularioContato.addEventListener("submit", async function(evento) {
+
+    // Impede o comportamento padrão do navegador,
+    // que seria recarregar a página ao submeter o form
+    evento.preventDefault();
+
+    // ─── Lê os valores digitados nos campos ───
+    const nome     = document.getElementById("campo-nome").value;
+    const email    = document.getElementById("campo-email").value;
+    const mensagem = document.getElementById("campo-mensagem").value;
+
+    // Agrupa os dados em um objeto para enviar como JSON
+    const dadosDoContato = { nome, email, mensagem };
+
+    // ─── Envia os dados para o servidor ───
+    try {
+        const resposta = await fetch("http://localhost:3000/contatos", {
+            method: "POST",              // POST = estamos ENVIANDO dados
+            headers: {
+                "Content-Type": "application/json"  // avisa o servidor que é JSON
+            },
+            body: JSON.stringify(dadosDoContato)    // converte o objeto para texto JSON
+        });
+
+        if (resposta.ok) {
+            // Servidor respondeu com sucesso (status 200-299)
+            exibirNotificacao("sucesso");
+
+            // Limpa todos os campos do formulário
+            formularioContato.reset();
+
+        } else {
+            // Servidor respondeu, mas com erro (ex: status 500)
+            exibirNotificacao("erro");
+        }
+
+    } catch (erro) {
+        // Erro de rede: servidor offline, sem internet, etc.
+        exibirNotificacao("erro");
+        console.error("Erro ao enviar mensagem:", erro);
+    }
+});
